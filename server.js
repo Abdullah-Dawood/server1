@@ -30,6 +30,10 @@ app.use("/user", userRoutes);
 
 app.use("/todo", todoRoutes);
 
+app.get("/", (req, res) => {
+  res.send("hello");
+});
+
 // if (process.env.NODE_ENV === "production") {
 //   app.get("/", (req, res) => {
 //     app.use(express.static(path.resolve(__dirname, "client", "dist")));
